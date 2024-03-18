@@ -1,5 +1,6 @@
 def main():
-    print("Welcome to my calculator!")
+    print("---Welcome to my calculator!---")
+    print("-------------------------------")
     get_input()
     choose_op()
     
@@ -22,7 +23,14 @@ def get_input():
 def choose_op():
     print("Choose operation:")
     print("1 - addition\n2 - subtraction\n3 - multiplication\n4 - division")
-    operation = input()
+    while True:
+        operation = input()
+        if not operation.isdigit():
+            print("You need to provide a number.")
+        elif int(operation) > 4:
+                print("That is not an option.")
+        else:
+            break
     return operation
 
 
