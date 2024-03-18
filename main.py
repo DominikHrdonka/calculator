@@ -2,9 +2,13 @@ def main():
     print("---Welcome to my calculator!---")
     print("-------------------------------")
     numbers = get_input()
+    a = int(numbers[0])
+    b = int(numbers[1])
     option = choose_op()
     if int(option) == 1:
-        addition(int(numbers[0]), int(numbers[1]))
+        addition(a, b)
+    elif int(option) == 2:
+        subtraction(a, b)
     
 
 def get_input():
@@ -36,7 +40,11 @@ def choose_op():
     return operation
 
 def addition(a, b):
-    result = a + b
-    print(f"{a} + {b} = {result}")
+    add = a + b
+    print(f"{a} + {b} = {add}")
+
+def subtraction(a, b):
+    subtr = a - b
+    print(f"{a} - {b} = {subtr}")
     
 main()
