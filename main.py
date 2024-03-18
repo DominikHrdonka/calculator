@@ -1,26 +1,34 @@
 def main():
     print("---Welcome to my calculator!---")
     print("-------------------------------")
-    numbers = get_input()
-    a = int(numbers[0])
-    b = int(numbers[1])
     while True:
-        option = choose_op()
-        if int(option) == 1:
-            addition(a, b)
-            break
-        elif int(option) == 2:
-            subtraction(a, b)
-            break
-        elif int(option) == 3:
-            multiplication(a, b)
-            break
-        elif int(option) == 4:
-            division(a, b)
-            if ZeroDivisionError:
-                continue
-            else:
+        numbers = get_input()
+        a = int(numbers[0])
+        b = int(numbers[1])
+        while True:
+            option = choose_op()
+            if int(option) == 1:
+                addition(a, b)
                 break
+            elif int(option) == 2:
+                subtraction(a, b)
+                break
+            elif int(option) == 3:
+                multiplication(a, b)
+                break
+            elif int(option) == 4:
+                division(a, b)
+                if ZeroDivisionError:
+                    continue
+                else:
+                    break
+        again = input("Do you want to count something else? ").lower()
+        if again == "y" or again == "yes":
+            True
+        elif again == "n" or again == "no":
+            print("---Thank you for using my calculator, BYE!---")
+            break
+
 
     
 
