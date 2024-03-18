@@ -4,13 +4,24 @@ def main():
     numbers = get_input()
     a = int(numbers[0])
     b = int(numbers[1])
-    option = choose_op()
-    if int(option) == 1:
-        addition(a, b)
-    elif int(option) == 2:
-        subtraction(a, b)
-    elif int(option) == 3:
-        multiplication(a, b)
+    while True:
+        option = choose_op()
+        if int(option) == 1:
+            addition(a, b)
+            break
+        elif int(option) == 2:
+            subtraction(a, b)
+            break
+        elif int(option) == 3:
+            multiplication(a, b)
+            break
+        elif int(option) == 4:
+            division(a, b)
+            if ZeroDivisionError:
+                continue
+            else:
+                break
+
     
 
 def get_input():
@@ -52,5 +63,13 @@ def subtraction(a, b):
 def multiplication(a, b):
     mult = a * b
     print(f"{a} * {b} = {mult}")
+
+def division(a, b):
+    try:
+        div = a / b
+        print(f"{a} / {b} = {div}")
+    except ZeroDivisionError:
+        print("You can't divide by zero.")
+                
     
 main()
