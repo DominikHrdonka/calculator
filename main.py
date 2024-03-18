@@ -9,6 +9,8 @@ def main():
         addition(a, b)
     elif int(option) == 2:
         subtraction(a, b)
+    elif int(option) == 3:
+        multiplication(a, b)
     
 
 def get_input():
@@ -46,5 +48,9 @@ def addition(a, b):
 def subtraction(a, b):
     subtr = a - b
     print(f"{a} - {b} = {subtr}")
+
+def multiplication(a, b):
+    mult = a * b
+    print(f"{a} * {b} = {mult}")
     
 main()
