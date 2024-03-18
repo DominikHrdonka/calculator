@@ -1,8 +1,10 @@
 def main():
     print("---Welcome to my calculator!---")
     print("-------------------------------")
-    get_input()
-    choose_op()
+    numbers = get_input()
+    option = choose_op()
+    if int(option) == 1:
+        addition(int(numbers[0]), int(numbers[1]))
     
 
 def get_input():
@@ -33,6 +35,8 @@ def choose_op():
             break
     return operation
 
-
-
+def addition(a, b):
+    result = a + b
+    print(f"{a} + {b} = {result}")
+    
 main()
